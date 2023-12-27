@@ -1,0 +1,29 @@
+management:
+  endpoint:
+    health:
+      show-details: always
+  health:
+    circuitbreakers:
+      enabled: true
+
+  endpoints:
+    web:
+      exposure:
+        include: health
+
+  # Address of OLTP Server
+  otlp:
+    tracing:
+      endpoint: http://localhost:4318/v1/traces
+
+  # Capture all traces
+  tracing:
+    sampling:
+      probability: 1.0
+
+spring:
+  application:
+    name: service1
+
+server:
+  port: 8080
