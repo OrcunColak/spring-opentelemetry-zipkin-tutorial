@@ -22,5 +22,6 @@ services:
   zipkin:
     image: openzipkin/zipkin:latest
     restart: always
+    # http://127.0.0.1:9411
     ports:
       - "9411:9411"

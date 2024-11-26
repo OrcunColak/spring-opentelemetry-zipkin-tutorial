@@ -1,13 +1,24 @@
 receivers:
   otlp:
     protocols:
+      grpc:
+        endpoint: 0.0.0.0:4317
       http:
+        endpoint: 0.0.0.0:4318
 
 processors:
   batch:
+    timeout: 1s
+    send_batch_size: 1024
+  attributes:
+    actions:
+      - key: service.name
+        action: upsert
+        from_attribute: service.name
 
 exporters:
-
+  logging:
+    loglevel: debug
   zipkin:
     endpoint: "http://zipkin:9411/api/v2/spans"
     format: proto
@@ -22,5 +33,5 @@ service:
   pipelines:
     traces:
       receivers: [otlp]
-      processors: [batch]
-      exporters: [zipkin]
+      processors: [batch, attributes]
+      exporters: [logging,zipkin]
