@@ -1,6 +1,6 @@
-package com.colak.springopentelemetrytutorial.controller;
+package com.colak.springtutorial.controller;
 
-import com.colak.springopentelemetrytutorial.service.Service1;
+import com.colak.springtutorial.service.Service1;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

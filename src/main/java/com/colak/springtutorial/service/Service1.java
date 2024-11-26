@@ -1,4 +1,4 @@
-package com.colak.springopentelemetrytutorial.service;
+package com.colak.springtutorial.service;
 
 import io.micrometer.tracing.annotation.NewSpan;
 import lombok.extern.slf4j.Slf4j;

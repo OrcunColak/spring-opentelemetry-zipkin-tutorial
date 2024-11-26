@@ -1,4 +1,4 @@
-package com.colak.springopentelemetrytutorial.config;
+package com.colak.springtutorial.config;
 
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.context.annotation.Bean;

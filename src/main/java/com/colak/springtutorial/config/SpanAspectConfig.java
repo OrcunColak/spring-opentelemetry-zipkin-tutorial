@@ -1,4 +1,4 @@
-package com.colak.springopentelemetrytutorial.config;
+package com.colak.springtutorial.config;
 
 import io.micrometer.tracing.Tracer;
 import io.micrometer.tracing.annotation.DefaultNewSpanParser;

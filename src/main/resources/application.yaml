@@ -1,16 +1,4 @@
 management:
-  endpoint:
-    health:
-      show-details: always
-  health:
-    circuitbreakers:
-      enabled: true
-
-  endpoints:
-    web:
-      exposure:
-        include: health
-
   # Address of OLTP Server
   otlp:
     tracing:
